@@ -1,0 +1,22 @@
+# core
+torch
+torchvision
+numpy
+pillow
+
+# evaluation and analysis
+scikit-learn
+thop
+
+# onnx export and verification
+onnx
+onnxruntime
+
+# webcam demo
+opencv-python
+
+# not on pypi: hailo_sdk_client (Hailo Dataflow Compiler), install the wheel
+# from the Hailo Developer Zone to run compile_hailo_hef.py
+
+# tip: pin the exact versions you trained with by replacing the lines above
+# with the output of: pip freeze
