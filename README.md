@@ -20,9 +20,6 @@ All scripts live in the repository root because they locate `data/`, `checkpoint
 ```
 hagrid-mobilenetv2-hailo/
 ├── README.md
-├── LICENSE
-├── requirements.txt
-├── .gitignore
 │
 ├── train_partial_finetune.py        stage 1: backbone frozen except the last 4 blocks
 ├── train_full_finetune.py           stage 2: full backbone fine-tuning
@@ -144,11 +141,3 @@ The scripts report the following metrics. Accuracy is measured on the held-out t
 - Target architecture: `hailo10h`.
 - The ONNX file written by `export_onnx_hailo.py` must be parsed into a HAR file with the Hailo Dataflow Compiler before `compile_hailo_hef.py` can run. The model input is named `input` and the output is named `output`.
 - Calibration uses 512 random training images, resized to 224x224 and normalized with the ImageNet mean and std, in NHWC layout. Inputs must be normalized the same way at inference time unless the normalization was added to the HAR model.
-
-## Pretrained files
-
-Trained checkpoints and compiled models are too large for the repository and are published under [Releases](../../releases) when available.
-
-## License
-
-This project is released under the MIT License, see [LICENSE](LICENSE). The HaGRID dataset and the Hailo software are covered by their own licenses.
